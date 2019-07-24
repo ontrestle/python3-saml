@@ -47,6 +47,7 @@ class OneLogin_Saml2_Auth(object):
         :param custom_base_path: Optional. Path where are stored the settings file and the cert folder
         :type custom_base_path: string
         """
+        request_data['server_port'] = 443
         self.__request_data = request_data
         if isinstance(old_settings, OneLogin_Saml2_Settings):
             self.__settings = old_settings
